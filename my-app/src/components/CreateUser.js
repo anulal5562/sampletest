@@ -34,4 +34,4 @@ const CreateUser = ({onChangeForm, createUser }) => {
     )
 }
 
-export default CreateUser
+export default CreateUser 
