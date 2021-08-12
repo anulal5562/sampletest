@@ -6,7 +6,7 @@ const CreateUser = ({onChangeForm, createUser }) => {
 
     return(
         <div className="container">
-            <div className="row">
+            <div className="row">   
                 <div className="col-md-7 mrgnbtm">
                 <h2>Create User</h2>
                 <form>
