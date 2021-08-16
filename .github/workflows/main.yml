@@ -21,5 +21,11 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - run: |
-        docker build . -t bestonacr.azurecr.io/sample-app:latest
-        docker push bestonacr.azurecr.io/sample-app:latest     
+        docker build . -t bestonacr.azurecr.io/sample-app:${{ github.sha }}
+        docker push bestonacr.azurecr.io/sample-app:${{ github.sha }}     
+
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'sample-app'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        images: 'bestonacr.azurecr.io/myapp:${{ github.sha }}'
