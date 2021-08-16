@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - run: |
-        docker build . -t mycontainer.azurecr.io/myapp:${{ github.sha }}
+        docker build . -t bestonacr.azurecr.io/myapp:${{ github.sha }}
         docker push bestonacr.azurecr.io/myapp:${{ github.sha }}     
