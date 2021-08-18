@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  beston-poc:
+    build: 
+        context: .
+        dockerfile: Dockerfile
+    image: beston-poc
+    container_name: beston-poc-container
+    restart: unless-stopped
+    ports:
+      - "3080:3001"
