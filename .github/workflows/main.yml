@@ -18,7 +18,7 @@ jobs:
       with:
         login-server: bestonacr.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        password: ${{ secrets.REGISTRY_PASSWORD }} 
     
     - run: |
         docker-compose up
