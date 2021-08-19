@@ -4,7 +4,7 @@ services:
     build: 
         context: .
         dockerfile: Dockerfile
-    image: beston-poc
+    image: bestonacr.azurecr.io/beston-poc:latest
     container_name: beston-poc-container
     restart: unless-stopped
     ports:
