@@ -21,7 +21,7 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }} 
     
     - run: |
-        docker-compose up
+        docker-compose build
 
     - uses: azure/webapps-deploy@v2
       with:
