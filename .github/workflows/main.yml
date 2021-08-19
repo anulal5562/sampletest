@@ -19,10 +19,9 @@ jobs:
         login-server: bestonacr.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-
+    
     - run: |
-       docker-compose -f "docker-compose.yaml" up -d --build bestonacr.azurecr.io/sample-app:${{ github.sha }}
-       docker-compose push bestonacr.azurecr.io/sample-app:${{ github.sha }}
+        docker-compose up
 
     - uses: azure/webapps-deploy@v2
       with:
