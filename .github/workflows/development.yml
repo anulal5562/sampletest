@@ -1,7 +1,8 @@
 name: On push to any branch other than master
-push:
-    branches-ignore:
-      - master
+on:
+  push:
+      branches-ignore:
+        - master
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
